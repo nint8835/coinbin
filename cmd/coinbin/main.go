@@ -34,7 +34,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Error while attempting to retrieve coin value: %s", err)
 			os.Exit(1)
 		}
-		fmt.Printf("%f %s -> %f United States Dollars", *currencyAmount, coin.Name, coinVal.USDValue)
+		fmt.Printf("%g %s -> %g United States Dollars", *currencyAmount, coin.Name, coinVal.USDValue)
 	} else {
 		coinTwo, err := coinbin.GetCoin(*toName)
 		if err != nil {
@@ -46,7 +46,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Error retrieving exchange information: %s", err)
 			os.Exit(1)
 		}
-		fmt.Printf("%f %s -> %f %s", *currencyAmount, coin.Name, exchange.Value, coinTwo.Name)
+		fmt.Printf("%g %s -> %g %s", *currencyAmount, coin.Name, exchange.Value, coinTwo.Name)
 	}
 
 
