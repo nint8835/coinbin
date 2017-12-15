@@ -15,6 +15,10 @@ type Coin struct {
 	Rank     int     `json:"rank"`
 }
 
+func (c Coin) GetValue(amount float64) (CoinValue, error) {
+	return GetCoinValue(c.Name, amount)
+}
+
 type CoinResponse struct {
 	Coin Coin `json:"coin"`
 }
