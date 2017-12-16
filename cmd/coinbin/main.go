@@ -29,7 +29,7 @@ func main() {
 		red.Fprint(os.Stderr, "No from currency provided.")
 		os.Exit(1)
 	}
-	
+
 	coin, err := coinbin.GetCoin(*fromName)
 
 	if err != nil {
