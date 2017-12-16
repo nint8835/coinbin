@@ -44,7 +44,7 @@ type CoinExchangeRateResponse struct {
 type CoinExchangeValue struct {
 	ExchangeRate float64 `json:"exchange_rate"`
 	Value        float64 `json:"value"`
-	ResultCoin   string `json:"value.coin"`
+	ResultCoin   string  `json:"value.coin"`
 }
 
 type CoinExchangeValueResponse struct {
